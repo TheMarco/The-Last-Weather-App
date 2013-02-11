@@ -3,7 +3,7 @@ The Last Weather App
 
 Copyright &copy; 2013 by Marco van Hylckama Vlieg.
 
-A humorous weather app for BlackBerry 10 with social media sharing and BBM connectivity. The number 1 weather app for BlackBerry 10.
+A humorous weather app for BlackBerry&reg; 10 with social media sharing and BBM connectivity. The number 1 weather app for BlackBerry&reg; 10. In it's current form, this code will only run on BlackBerry&reg; 10 because it depends on the WebWorks framework for large parts of it's functionality.
 
 ## License
 
