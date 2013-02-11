@@ -1,6 +1,8 @@
 The Last Weather App
 =================
 
+Copyright &copy; 2013 by Marco van Hylckama Vlieg.
+
 A humorous weather app for BlackBerry 10 with social media sharing and BBM connectivity. The number 1 weather app for BlackBerry 10.
 
 ## License
@@ -17,4 +19,6 @@ While I can't stop anyone from using this code to create an iOS app (free or pai
 
 I've decided to make this code Open Source so other BlackBerry&reg; WebWorks developers can take a look at it and maybe learn something for their own apps.
 
+## Contact me
 
+If you have any questions, suggestions or other feedback, please contact me at marcovhv - at - gmail.com.
