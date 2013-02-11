@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="local:///chrome/webworks.js"></script>
+<script type="text/javascript" src="js/bbm.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/tlwa.js"></script>
+<script type="text/javascript" src="js/savecanvas.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/canvas2blob.js"></script>
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded', function () {
+	document.addEventListener('webworksready', function () {
+		if (bbm.registered === false) {
+			bbm.register();
+		}
+		bb.init({
+			ondomready: function (element, id) {
+
+		}});
+	}, false);
+}, false);
+</script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+</head>
+<body>
+<div id="weather">
+	<div id="loader">
+	<div id="floatingCirclesG">
+	<div class="f_circleG" id="frotateG_01">
+	</div>
+	<div class="f_circleG" id="frotateG_02">
+	</div>
+	<div class="f_circleG" id="frotateG_03">
+	</div>
+	<div class="f_circleG" id="frotateG_04">
+	</div>
+	<div class="f_circleG" id="frotateG_05">
+	</div>
+	<div class="f_circleG" id="frotateG_06">
+	</div>
+	<div class="f_circleG" id="frotateG_07">
+	</div>
+	<div class="f_circleG" id="frotateG_08">
+	</div>
+	</div>	
+	<p id="fetching">Fetching the obvious. Please wait. Be patient, it may take a while.</p>
+</div>
+</body>
+</html>

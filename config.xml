@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+	xmlns:rim="http://www.blackberry.com/ns/widgets"
+	version="1.0.0.0" id="thelastweatherapp">
+
+	<author href="http://www.i-marco.nl/"
+		rim:copyright="Copyright 2013 Marco van Hylckama Vlieg">Marco van Hylckama Vlieg</author>
+
+		<name>The Last Weather App</name>
+
+		<description>
+			The only weather app you'll ever need.
+		</description>
+
+		<rim:permissions>
+			<rim:permit>read_geolocation</rim:permit>
+			<rim:permit>bbm_connect</rim:permit>
+			<rim:permit>access_shared</rim:permit>
+		</rim:permissions>
+		<feature id="blackberry.bbm.platform" />
+
+		<icon src="icons/icon-150.png"/>
+
+		<rim:splash src="splash.png"/>
+
+		<content src="index.html" rim:allowInvokeParams="true"/>
+		<feature id="blackberry.ui.dialog"/>
+		<feature id="blackberry.invoke" required="true" version="1.0.0.0"/>
+		<feature id="blackberry.io" required="true" version="1.0.0.0" />   
+		<feature id="blackberry.invoke.card" />
+		<feature id="blackberry.app.orientation">
+			<param name="mode" value="portrait" />
+		</feature>
+		<feature id="blackberry.app">
+			<param name="backgroundColor" value="0xFFFFFFFF" />
+		</feature>
+		<access uri="http://api.openweathermap.org" subdomains="true"></access> 
+	</widget>
