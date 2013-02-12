@@ -184,7 +184,7 @@
 								if(!weathericonstrip.match(weathericons[data.list[0].weather[i].id][k])) {
 									weathericonstrip = weathericonstrip + '<img src="img/' + weathericons[data.list[0].weather[i].id][k] + '" />';
 								}
-							}
+							}                            
 						}
 
 						if(datetest.getHours() > 18 || datetest.getHours() < 7) {

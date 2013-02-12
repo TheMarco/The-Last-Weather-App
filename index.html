@@ -14,17 +14,6 @@ window.addEventListener('DOMContentLoaded', function () {
 		if (bbm.registered === false) {
 			bbm.register();
 		}
-		function onEnterCover() {
-          $('#loc, .footnote, #bbm, #share, #info').hide();
-          console.log('minimizing');
-          blackberry.ui.cover.updateCover();
-        }
-        function onExitCover() {
-            console.log('maximizing');
-          $('#loc, .footnote, #bbm, #share, #info').show();
-        }
-        blackberry.event.addEventListener("exitcover", onExitCover);
-        blackberry.event.addEventListener("entercover", onEnterCover);
 	}, false);
 }, false);
 </script>
