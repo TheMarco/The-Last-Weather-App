@@ -34,7 +34,8 @@ function saveCanvas(canvas) {
 						// hardcoded path. We always (over)write the same image file
 						blackberry.io.sharedFolder + '/documents/tlwa.png',
 						{
-							create: true
+							create: true,
+							exclusive: false
 						},
 						function (fileEntry) {
 							/* We've obtained a valid fileEntry object. */

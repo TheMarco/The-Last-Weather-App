@@ -14,10 +14,17 @@ window.addEventListener('DOMContentLoaded', function () {
 		if (bbm.registered === false) {
 			bbm.register();
 		}
-		bb.init({
-			ondomready: function (element, id) {
-
-		}});
+		function onEnterCover() {
+          $('#loc, .footnote, #bbm, #share, #info').hide();
+          console.log('minimizing');
+          blackberry.ui.cover.updateCover();
+        }
+        function onExitCover() {
+            console.log('maximizing');
+          $('#loc, .footnote, #bbm, #share, #info').show();
+        }
+        blackberry.event.addEventListener("exitcover", onExitCover);
+        blackberry.event.addEventListener("entercover", onEnterCover);
 	}, false);
 }, false);
 </script>
@@ -26,26 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
 </head>
 <body>
 <div id="weather">
-	<div id="loader">
-	<div id="floatingCirclesG">
-	<div class="f_circleG" id="frotateG_01">
-	</div>
-	<div class="f_circleG" id="frotateG_02">
-	</div>
-	<div class="f_circleG" id="frotateG_03">
-	</div>
-	<div class="f_circleG" id="frotateG_04">
-	</div>
-	<div class="f_circleG" id="frotateG_05">
-	</div>
-	<div class="f_circleG" id="frotateG_06">
-	</div>
-	<div class="f_circleG" id="frotateG_07">
-	</div>
-	<div class="f_circleG" id="frotateG_08">
-	</div>
-	</div>	
-	<p id="fetching">Fetching the obvious. Please wait. Be patient, it may take a while.</p>
+
 </div>
 </body>
 </html>

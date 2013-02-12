@@ -52,7 +52,7 @@ h3 {
 	letter-spacing: 0;
 }
 #weather {
-padding: 20px;
+padding: 50px 20px 0 20px;
 }
 
 #floatingCirclesG{
@@ -153,6 +153,14 @@ background-color:#FFFFFF}
 	width: 81px;
 	height: 81px;
 	background: url(../img/bbm.png);
+}
+#refresh {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	width: 81px;
+	height: 81px;
+	background: url(../img/refresh.png);
 }
 #share {
 	position: absolute;

@@ -141,6 +141,9 @@
 		}
 
 		function getWeather() {
+		    
+		    $('#weather').html('<div id="loader"><div id="floatingCirclesG"><div class="f_circleG" id="frotateG_01"></div><div class="f_circleG" id="frotateG_02"></div><div class="f_circleG" id="frotateG_03"></div><div class="f_circleG" id="frotateG_04"></div><div class="f_circleG" id="frotateG_05"></div><div class="f_circleG" id="frotateG_06"></div><div class="f_circleG" id="frotateG_07"></div><div class="f_circleG" id="frotateG_08"></div></div><p id="fetching">Fetching the obvious. Please wait. Be patient, it may take a while.</p>');
+		    
 			var loc = navigator.geolocation.getCurrentPosition(showWeather);
 			function showWeather(position) {
 				var lat = Math.round(position.coords.latitude*10000)/10000;
@@ -154,7 +157,15 @@
 					var weatheritems = 0;
 					var datetest = new Date();
 					var dot = '';
-					var bbmmessage = 'My weather: ';
+					var d = new Date();
+					var hours = d.getHours();
+					var minutes = d.getMinutes();
+					var seconds = d.getSeconds();
+					if (hours < 10) {hours = '0' + hours;}
+					if (minutes < 10) {minutes = '0' + minutes;}
+					if (seconds < 10) {seconds = '0' + seconds;}
+					
+					var bbmmessage = 'My weather:';
 					if(data.list[0].weather) {
 						for(var i=0;i<data.list[0].weather.length;i++) {
 							if(i == data.list[0].weather.length-1) {
@@ -220,22 +231,22 @@
 					out = '<div class="weathericons">' + weathericonstrip + '</div>';
 					out = out + '<div id="weatherpanel">';
 					out = out + '<p id="loc">You are somewhere near ' + data.list[0].name + '.</p>';
-					out = out + '<p id="myweather">My weather right now:</p>';
+					out = out + '<p id="myweather">My weather right now (' + hours + ':' + minutes + ':' + seconds + ') :</p>';
 					out = out + '<div class="weathertext">' + weather + '</div>';
 					out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + '</div></div>';
 					out = out + '<div class="footnote">I could look outside for more information...</div>';
-					out = out + '<div class="poweredby">The Last Weather App. By Marco van Hylckama Vlieg.<br/>Only on BlackBerry&reg; 10' + '</div>';
+					out = out + '<div class="poweredby">The Last Weather App. By Marco van Hylckama Vlieg.<br/>Only on BlackBerry&reg; 10</div>';
 					out = out + '</div>';
-					out = out + '<div id="share"></div><div id="bbm"></div><div id="info"></div>'
+					out = out + '<div id="refresh"></div><div id="share"></div><div id="bbm"></div><div id="info"></div>'
 					$('#weather').html(out);
-					$('#loc, #bbm, #info, #share').hide();
+					$('#loc, #bbm, #info, #share, #refresh').hide();
 					html2canvas(document.getElementById('weather'), {
 						// first, create a canvas version of the weather screen
 						onrendered: function(canvas) {
 							// second, save the canvas as an image
 							saveCanvas(canvas);
 							$('.footnote').html('You can look outside for more information.');
-							$('#loc, #bbm, #info, #share').show();
+							$('#loc, #bbm, #info, #share, #refresh').show();
 							$('.poweredby, #myweather').remove();
 						}
 					});
@@ -265,6 +276,12 @@
 							case 'returnbtn':
 							$('#weather').show();
 							$('#infoscreen, #bbmscreen').hide();
+							break;
+
+							case 'refresh':
+							$(document).unbind();
+							$('body').html('<div id="weather"></div>');
+							getWeather();
 							break;
 
 							case 'bbm':
@@ -315,6 +332,7 @@
 				});
 			}
 		}
+				
 		$(document).ready(function() {
 			getWeather();
 		});
