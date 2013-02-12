@@ -9,6 +9,7 @@ font-size: 70px;
 font-weight: bold;
 line-height: 1.1em;
 }
+
 .weathericons {
 	padding-top: 30px;
 }
@@ -55,87 +56,17 @@ h3 {
 padding: 50px 20px 0 20px;
 }
 
-#floatingCirclesG{
-position:absolute;
-left: 280px;
-top: 300px;
-width:128px;
-height:128px;
--webkit-transform:scale(0.6);
-}
 #fetching {
 	position: relative;
 	top: 500px;
+	padding: 0 20px;
 	text-align: center;
 	font-size: 30px;
 }
-.f_circleG{
-position:absolute;
-background-color:#FFFFFF;
-height:23px;
-width:23px;
--webkit-border-radius:12px;
--webkit-animation-name:f_fadeG;
--webkit-animation-duration:0.48s;
--webkit-animation-iteration-count:infinite;
--webkit-animation-direction:linear;
-}
 
-#frotateG_01{
-left:0;
-top:52px;
--webkit-animation-delay:0.18s;
-}
-
-#frotateG_02{
-left:15px;
-top:15px;
--webkit-animation-delay:0.24s;
-}
-
-#frotateG_03{
-left:52px;
-top:0;
--webkit-animation-delay:0.3s;
-}
-
-#frotateG_04{
-right:15px;
-top:15px;
--webkit-animation-delay:0.36s;
-}
-
-#frotateG_05{
-right:0;
-top:52px;
--webkit-animation-delay:0.42s;
-}
-
-#frotateG_06{
-right:15px;
-bottom:15px;
--webkit-animation-delay:0.48s;
-}
-
-#frotateG_07{
-left:52px;
-bottom:0;
--webkit-animation-delay:0.54s;
-}
-
-#frotateG_08{
-left:15px;
-bottom:15px;
--webkit-animation-delay:0.6s;
-}
-
-@-webkit-keyframes f_fadeG{
-0%{
-background-color:#000000}
-
-100%{
-background-color:#FFFFFF}
-
+#loader {
+    height: 720px;
+    background: url(../img/loader.gif) no-repeat 50% 100px;
 }
 
 #info {
