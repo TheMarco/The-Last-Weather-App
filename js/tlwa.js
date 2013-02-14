@@ -121,10 +121,10 @@
 	var temperatures = [];
 	temperatures[0] = "Hell is <strong>freezing</strong> over.";
 	temperatures[1] = "<strong>Cold</strong> as fuck.";
-	temperatures[2] = "Damn <strong>chilly</strong>.";
+	temperatures[2] = "Fucking <strong>chilly</strong>.";
 	temperatures[3] = "Sort of ok.";
-	temperatures[4] = "Pretty damn <strong>nice</strong>.";
-	temperatures[5] = "Pretty damn <strong>hot</strong>.";
+	temperatures[4] = "Pretty fucking <strong>nice</strong>.";
+	temperatures[5] = "Pretty fucking <strong>hot</strong>.";
 	temperatures[6] = "<strong>Hot</strong> as fuck.";
 
 	function appWorld() {
@@ -237,7 +237,7 @@
 					out = out + '<div class="footnote">I could look outside for more information...</div>';
 					out = out + '<div class="poweredby">The Last Weather App. By Marco van Hylckama Vlieg.<br/>Only on BlackBerry&reg; 10</div>';
 					out = out + '</div>';
-					out = out + '<div id="refresh"></div><div id="share"></div><div id="bbm"></div><div id="info"></div>'
+					out = out + '<div id="menu"><div id="bbm"></div><div id="share"></div><div id="refresh"></div><div id="info"></div></div>';
 					$('#weather').html(out);
 					$('#loc, #bbm, #info, #share, #refresh').hide();
 					html2canvas(document.getElementById('weather'), {
@@ -268,14 +268,22 @@
 						var request;
 
 						switch(e.target.id) {
+						    
+						    case 'menu':
+						    $('#menu').toggleClass('on');
+						    break;
+						    
 							case 'info':
 							$('#weather, #bbmscreen').hide();
 							$('#infoscreen').show();
+							$('#menu').removeClass('on');
+							$('#menu').hide();
 							break;
 
 							case 'returnbtn':
 							$('#weather').show();
 							$('#infoscreen, #bbmscreen').hide();
+							$('#menu').show();
 							break;
 
 							case 'refresh':
@@ -287,10 +295,13 @@
 							case 'bbm':
 							$('#weather, #infoscreen').hide();
 							$('#bbmscreen').show();	
+							$('#menu').removeClass('on');
+							$('#menu').hide();
 							break;
 
 							case 'share':
 							// use invoke framework to share the previously created image of the user's current weather situation
+							$('#menu').removeClass('on');
 							request = {
 								action: 'bb.action.SHARE',
 								uri: 'file://' + blackberry.io.sharedFolder + '/documents/tlwa.png',
@@ -308,6 +319,7 @@
 							case 'return':
 							$('#weather').show();
 							$('#infoscreen, #bbmscreen').hide();
+							$('#menu').show();
 							break;
 							case 'bbmupdate':
 							if(bbm.registered) {

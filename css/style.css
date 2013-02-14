@@ -10,9 +10,6 @@ font-weight: bold;
 line-height: 1.1em;
 }
 
-.weathericons {
-	padding-top: 30px;
-}
 #weatherpanel {
 	padding: 0 30px;
 }
@@ -54,8 +51,8 @@ h3 {
 }
 #weather {
 padding: 50px 20px 0 20px;
+height: 1050px;
 }
-
 #fetching {
 	position: relative;
 	top: 500px;
@@ -68,38 +65,52 @@ padding: 50px 20px 0 20px;
     height: 720px;
     background: url(../img/loader.gif) no-repeat 50% 100px;
 }
-
-#info {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 81px;
-	height: 81px;
-	background: url(../img/info.png);
+#menu {
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 20px;
+    width: 81px;
+    height: 81px;
+    background: url(../icons/star.png);
+    background-position: right;
 }
-#bbm {
-	position: absolute;
-	top: 15px;
-	right: 111px;
-	width: 81px;
-	height: 81px;
-	background: url(../img/bbm.png);
+#menu.on {
+    background-position: left;
 }
-#refresh {
+#menu div {
 	position: absolute;
-	top: 15px;
-	left: 10px;
 	width: 81px;
-	height: 81px;
-	background: url(../img/refresh.png);
+	height: 81px;    
+	-webkit-transform: translate3d(0px,0px,0px) scale(0);
+	-webkit-transition: all 0.2s ease-out;
 }
-#share {
-	position: absolute;
-	top: 15px;
-	right: 211px;
-	width: 81px;
-	height: 81px;
-	background: url(../img/share.png);	
+#menu #info {
+    background: url(../icons/info.png);
+}
+#menu #share {
+    background: url(../icons/share.png);
+}
+#menu #refresh {
+    background: url(../icons/refresh.png);
+}
+#menu #bbm {
+    background: url(../icons/bbm.png);
+}
+#menu.on div#info {
+	-webkit-transform: translate3d(160px, -100px, 0px) scale(1);	
+}
+#menu.on div#bbm {
+	-webkit-transform: translate3d(0, -180px, 0px) scale(1);
+	background: url(../icons/bbm.png);	
+}
+#menu.on div#refresh {
+	-webkit-transform: translate3d(180px, 0, 0px) scale(1);
+	background: url(../icons/refresh.png);
+}
+#menu.on div#share {
+	-webkit-transform: translate3d(100px, -160px, 0px) scale(1);
+	background: url(../icons/share.png);	
 }
 #infoscreen, #bbmscreen {
 	text-align: center;
@@ -134,6 +145,7 @@ padding: 50px 20px 0 20px;
 }
 #returnbtn {
 	border-top: none;
+	text-align: left;
 }
 #applink img {
 	position: absolute;
