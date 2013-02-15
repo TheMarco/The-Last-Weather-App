@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+     <script>
+ 	var meta = document.createElement("meta");
+ 	meta.setAttribute('name','viewport');
+ 	meta.setAttribute('content','initial-scale='+ (1/window.devicePixelRatio) + ',user-scalable=no');
+ 	document.getElementsByTagName('head')[0].appendChild(meta);
+    </script>
 <script type="text/javascript" src="local:///chrome/webworks.js"></script>
 <script type="text/javascript" src="js/bbm.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>

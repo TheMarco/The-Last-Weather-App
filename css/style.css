@@ -11,14 +11,14 @@ line-height: 1.1em;
 }
 
 #weatherpanel {
-	padding: 0 30px;
+	padding: 0 20px;
 }
 .temp {
 	font-size: 40px;
 	font-weight: bold;
 	height: 100px;
 	position: relative;
-	margin: 25px auto 0 auto;
+	margin: 25px auto 25px auto;
 }
 
 .temp img {
@@ -41,7 +41,7 @@ h3 {
 }
 .footnote {
 	font-size: 30px;
-	line-height: 100px;
+	margin-bottom: 25px;
 	letter-spacing: 0;
 }
 .poweredby {
@@ -61,6 +61,11 @@ height: 1050px;
 	font-size: 30px;
 }
 
+#weathericons {
+    margin: 0;
+    padding: 0;
+}
+
 #loader {
     height: 720px;
     background: url(../img/loader.gif) no-repeat 50% 100px;
@@ -75,6 +80,7 @@ height: 1050px;
     background: url(../icons/star.png);
     background-position: right;
 }
+
 #menu.on {
     background-position: left;
 }
@@ -157,4 +163,6 @@ height: 1050px;
 }
 #loc, #myweather {
 	font-size: 30px;
+	margin: 0;
+	margin-bottom:10px;
 }
