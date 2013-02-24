@@ -1,3 +1,11 @@
+/* 
+    This code comes from http://kybernetikos.github.com/SolarPosition/ 
+    It's used to calculate whether it's day or night based on latitude, 
+    longitude and timezone.
+    I'd mention the guy's name if it was listed anywhere.
+
+*/
+
 var Time = (function() {
 
 	function Time(dayFraction) {
@@ -1040,9 +1048,11 @@ var SolarPosition = (function() {
 	return SolarPosition;
 
 })();
+
+
 function getOffset() {
 var offset = new Date().getTimezoneOffset()
-return ((offset<0? '+':'-')+ // Note the reversed sign!
+return ((offset<0? '+':'-')+ 
           parseInt(Math.abs(offset/60)) +
           Math.abs(offset%60)) / 10;        
       };
@@ -1063,6 +1073,9 @@ function getSunrise(lat, lon) {
 }      
 
 function isNight(lat, lon) {
+    
+    // The function we needed: Is it night, or not?
+    
     var ss = Date.parse('01/01/2013 ' + getSunset(lat, lon).split('.')[0]);
     var sr = Date.parse('01/01/2013 ' + getSunrise(lat, lon).split('.')[0]);
     var date = new Date();
