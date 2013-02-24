@@ -4,6 +4,10 @@ letter-spacing: -0.1em;
 margin: 0;
 padding: 0;
 }
+body.night {
+    color: #fff;
+    background: #000;
+}
 .weathertext  {
 font-size: 70px;
 font-weight: bold;
@@ -34,6 +38,9 @@ line-height: 1.1em;
 strong {
 	color: #a00;
 }
+body.night strong {
+    color: #5dbcff;
+}
 h3 {
 	font-size: 30px;
 	font-weight: normal;
@@ -52,6 +59,9 @@ h3 {
 #weather {
 padding: 50px 20px 0 20px;
 height: 1050px;
+}
+body.night #weather {
+    background: #000;
 }
 #fetching {
 	position: relative;
@@ -80,8 +90,12 @@ height: 1050px;
     background: url(../icons/star.png);
     background-position: right;
 }
+body.night #menu {
+    background: url(../icons/star_n.png);   
+    background-position: right; 
+}
 
-#menu.on {
+#menu.on, body.night #menu.on {
     background-position: left;
 }
 #menu div {
@@ -94,14 +108,26 @@ height: 1050px;
 #menu #info {
     background: url(../icons/info.png);
 }
+body.night #menu #info {
+    background: url(../icons/info_n.png);
+}
 #menu #share {
     background: url(../icons/share.png);
+}
+body.night #menu #share {
+    background: url(../icons/share_n.png);
 }
 #menu #refresh {
     background: url(../icons/refresh.png);
 }
+body.night #menu #refresh {
+    background: url(../icons/refresh_n.png);
+}
 #menu #bbm {
     background: url(../icons/bbm.png);
+}
+body.night #menu #bbm {
+    background: url(../icons/bbm_n.png);
 }
 #menu.on div#info {
 	-webkit-transform: translate3d(160px, -100px, 0px) scale(1);	
@@ -118,6 +144,20 @@ height: 1050px;
 	-webkit-transform: translate3d(100px, -160px, 0px) scale(1);
 	background: url(../icons/share.png);	
 }
+
+body.night #menu.on div#bbm {
+	-webkit-transform: translate3d(0, -180px, 0px) scale(1);
+	background: url(../icons/bbm_n.png);	
+}
+body.night #menu.on div#refresh {
+	-webkit-transform: translate3d(180px, 0, 0px) scale(1);
+	background: url(../icons/refresh_n.png);
+}
+body.night #menu.on div#share {
+	-webkit-transform: translate3d(100px, -160px, 0px) scale(1);
+	background: url(../icons/share_n.png);	
+}
+
 #infoscreen, #bbmscreen {
 	text-align: center;
 	min-height: 1000px;
@@ -148,6 +188,9 @@ height: 1050px;
 	text-decoration: none;
 	color: #000;
 	text-align: left;
+}
+body.night #applink {
+    color: #fff;
 }
 #returnbtn {
 	border-top: none;

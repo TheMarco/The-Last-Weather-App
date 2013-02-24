@@ -16,6 +16,7 @@
 */
 
 (function() {	
+    var night;
 	var weathericons = {
 		"200" : ["thunder.png", "rain_medium.png"],
 		"201" : ["thunder.png", "rain_heavy.png"],
@@ -147,7 +148,9 @@
 			var loc = navigator.geolocation.getCurrentPosition(showWeather);
 			function showWeather(position) {
 				var lat = Math.round(position.coords.latitude*10000)/10000;
-				var lon = Math.round(position.coords.longitude*10000)/10000;				
+				var lon = Math.round(position.coords.longitude*10000)/10000;
+				night = isNight(lat, lon);	
+
 				$.getJSON('http://api.openweathermap.org/data/2.1/find/city?lat=' + lat +  '&lon=' + lon + '&cnt=1', function(data) {
 					var tempnode;
 					var tempicon;
@@ -187,7 +190,7 @@
 							}                            
 						}
 
-						if(datetest.getHours() > 18 || datetest.getHours() < 7) {
+						if(night) {
 							weathericonstrip = weathericonstrip.replace(/day/g, 'night');
 						}
 						avg_temp = ((data.list[0].main.temp_max + data.list[0].main.temp_min) / 2) - 273.15;
@@ -234,10 +237,24 @@
 					out = out + '<p id="myweather">The fucking weather right now (' + hours + ':' + minutes + ') :</p>';
 					out = out + '<div class="weathertext">' + weather + '</div>';
 					out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + '</div></div>';
-					out = out + '<div class="footnote">I could look outside for more information...</div>';
+					if(night) {
+					    out = out + '<div class="footnote">I could look outside for more information but it\'s <strong>fucking dark</strong> right now...</div>';   
+					}
+					else {
+					    out = out + '<div class="footnote">I could look outside for more information...</div>';
+				    }
 					out = out + '<div class="poweredby">The Last Weather App. By Marco van Hylckama Vlieg.<br/>Only on BlackBerry&reg; 10</div>';
 					out = out + '</div>';
 					out = out + '<div id="menu"><div id="bbm"></div><div id="share"></div><div id="refresh"></div><div id="info"></div></div>';
+					if(night) {
+					    out = out.replace(/\.png/g, '_n.png');
+					}
+					if(night) {
+    				    $('body').addClass('night');
+    				}			
+    				else {
+    				    $('body').removeClass('night');
+    				}
 					$('#weather').html(out);
 					$('#loc, #bbm, #info, #share, #refresh').hide();
 					html2canvas(document.getElementById('weather'), {
@@ -245,7 +262,12 @@
 						onrendered: function(canvas) {
 							// second, save the canvas as an image
 							saveCanvas(canvas);
-							$('.footnote').html('You can look outside for more information.');
+							if(night) {
+    							$('.footnote').html('You could look outside for more information but it\'s <strong>fucking dark</strong>.');							 
+							}
+							else {
+							    $('.footnote').html('You can look outside for more information.');
+						    }
 							$('#loc, #bbm, #info, #share, #refresh').show();
 							$('.poweredby, #myweather').remove();
 						}
