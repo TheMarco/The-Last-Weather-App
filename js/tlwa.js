@@ -352,6 +352,7 @@
 
                         case 'refresh':
                             $(document).unbind();
+                            blackberry.ui.cover.resetCover();
                             $('body').html('<div id="weather"></div>');
                             getWeather();
                             break;
