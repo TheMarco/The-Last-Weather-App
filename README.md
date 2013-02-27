@@ -5,6 +5,17 @@ Copyright &copy; 2013 by Marco van Hylckama Vlieg.
 
 A humorous weather app for BlackBerry&reg; 10 with social media sharing and BBM connectivity. The number 1 weather app for BlackBerry&reg; 10. In it's current form, this code will only run on BlackBerry&reg; 10 because it depends on the WebWorks framework for large parts of it's functionality.
 
+## Features
+
+This app contains many BlackBerry&reg; specific features. Study the code and learn!
+
+* GPS geolocation
+* BBM Invite Friend
+* Invocation (Sharing)
+* On-the-fly image generation
+* Filesystem operations
+* Active Covers (view when app is minimized)
+
 ## License
 
 This code contains various components with a few different license. I'm not a lawyer so if you find anything wrong please let me know and I'll make appropriate changes. My code is licensed under the Apache License version 2.0:
