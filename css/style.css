@@ -32,8 +32,11 @@ line-height: 1.1em;
 }
 .temptext {
 	position: absolute;
-	top: 30px;
+	top: 0;
 	left: 100px;
+}
+.temp .temperature {
+    font-size: 30px;
 }
 strong {
 	color: #a00;

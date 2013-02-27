@@ -168,7 +168,7 @@
 					if (minutes < 10) {minutes = '0' + minutes;}
 					if (seconds < 10) {seconds = '0' + seconds;}
 					
-					var bbmmessage = 'My weather:';
+					var bbmmessage = 'My weather: ';	
 					if(data.list[0].weather) {
 						for(var i=0;i<data.list[0].weather.length;i++) {
 							if(i == data.list[0].weather.length-1) {
@@ -176,6 +176,7 @@
 							}
 							if(weatheritems > 0) {
 								weather += '<div class="weatherdescription"> and ' + weathercodes[data.list[0].weather[i].id].replace(/fucking/,'bloody') + dot + '</div>';
+                                
 								bbmmessage = bbmmessage + ' and ' + weathercodes[data.list[0].weather[i].id].replace(/fucking/,'bloody') + dot;
 							}
 							else {
@@ -189,11 +190,31 @@
 								}
 							}                            
 						}
+						bbmmessage = bbmmessage.replace(/<(?:.|\n)*?>/gm, '');
+    					
 
+                        
 						if(night) {
 							weathericonstrip = weathericonstrip.replace(/day/g, 'night');
+							blackberry.ui.cover.setContent(blackberry.ui.cover.TYPE_IMAGE, {
+                        		path: 'local:///img/c_' + weathericons[data.list[0].weather[0].id][0].replace(/day/g, 'night').replace('.png', '_n.png')
+                        	});
+						} else {
+							blackberry.ui.cover.setContent(blackberry.ui.cover.TYPE_IMAGE, {
+                        		path: 'local:///img/c_' + weathericons[data.list[0].weather[0].id][0]
+                        	});					    
 						}
 						avg_temp = ((data.list[0].main.temp_max + data.list[0].main.temp_min) / 2) - 273.15;
+						blackberry.ui.cover.labels.push({
+    					   label: '(' + Math.round((avg_temp * 1.8) + 32) + 'F / ' + Math.round(avg_temp) + 'C)',
+    					   size: 10,
+    					   wrap: true 
+    					});
+						blackberry.ui.cover.labels.push({
+                            label: bbmmessage.replace("My weather: ", ""),
+                            size: 10,
+                            wrap: true
+                        });
 						if(avg_temp < -15) {
 							tempnote = temperatures[0];
 							bbmmessage = bbmmessage + ' ' + temperatures[0];
@@ -230,13 +251,13 @@
 							tempicon = '<img src="img/temp_5.png" />';  
 						}		
 					}
-					bbmmessage = bbmmessage.replace(/<(?:.|\n)*?>/gm, '');
+					bbmmessage = bbmmessage + ' ' + '(' + Math.round((avg_temp * 1.8) + 32) + 'F / ' + Math.round(avg_temp) + 'C)';
 					out = '<div class="weathericons">' + weathericonstrip + '</div>';
 					out = out + '<div id="weatherpanel">';
 					out = out + '<p id="loc">You\'re near fucking ' + data.list[0].name + '.</p>';
 					out = out + '<p id="myweather">The fucking weather right now (' + hours + ':' + minutes + ') :</p>';
 					out = out + '<div class="weathertext">' + weather + '</div>';
-					out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + '</div></div>';
+					out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + '<br /><span class="temperature">(' + Math.round((avg_temp * 1.8) + 32) + '&deg;F / ' + Math.round(avg_temp) + '&deg;C)</span></div></div>';
 					if(night) {
 					    out = out + '<div class="footnote">I could look outside for more information but it\'s <strong>fucking dark</strong> right now...</div>';   
 					}
@@ -277,6 +298,13 @@
 
 					$('#infoscreen, #bbmscreen').hide();
 
+                    function onEnterCover() {
+
+                      blackberry.ui.cover.updateCover();
+                    }
+
+                    blackberry.event.addEventListener("entercover", onEnterCover);
+                    
 					$('#returnbtn, #bbmscreen li, #applink')
 					.bind('touchstart', function(e) {
 						e.target.style.background = '#cccccc';
