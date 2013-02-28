@@ -14,6 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */ (function () {
+     
+    var lang = 'en'; 
+    
+    var s = $('<script type="text/javascript" src="js/strings-' + lang + '.js"></script>');
+    $('head').prepend(s);
+     
     var night;
     var weathericons = {
         "200": ["thunder.png", "rain_medium.png"],
@@ -65,66 +71,6 @@
         "905": ["wind.png"],
         "906": ["hail.png"]
     }
-    var weathercodes = {
-        "200": "some <strong>fucking thunderstorms</strong> with a bit of rain",
-        "201": "some <strong>fucking thunderstorms</strong> and it's pissing down",
-        "202": "some <strong>fucking thunderstorms</strong> with apocalyptic rain",
-        "210": "lame <strong>thunderstorms</strong>",
-        "211": "a <strong>fucking thunderstorm</strong>",
-        "212": "a big <strong>fucking thunderstorm</strong>",
-        "221": "a <strong>fucking ragged thunderstorm</strong>",
-        "230": "a <strong>fucking thunderstorm</strong> with light drizzle",
-        "231": "a <strong>fucking thunderstorm</strong> with drizzle",
-        "232": "a <strong>fucking thunderstorm</strong> with heavy drizzle",
-        "300": "light <strong>fucking drizzle</strong>",
-        "301": "a <strong>fucking drizzle</strong>",
-        "302": "heavy <strong>fucking drizzle</strong>",
-        "310": "it's <strong>pissing down</strong> lightly",
-        "311": "it's <strong>pissing down</strong>",
-        "312": "it's <strong>pissing down</strong> heavily",
-        "321": "<strong>Pissing showers</strong>",
-        "500": "it's <strong>pissing down</strong> lightly",
-        "501": "it's <strong>pissing down</strong> moderately",
-        "502": "it's <strong>fucking raining</strong> right now",
-        "503": "it's <strong>fucking raining</strong>, monsoon style",
-        "504": "an <strong>apocalyptic downpour</strong>. Prepare fucking boats",
-        "511": "there's freezing <strong>fucking rain</strong>",
-        "520": "there are light <strong>fucking showers</strong>",
-        "521": "there are <strong>fucking showers</strong>",
-        "522": "there are heavy <strong>fucking showers</strong>",
-        "600": "there is <strong>fucking light snow</strong>",
-        "601": "it's <strong>fucking snowing</strong> right now",
-        "602": "tons of <strong>fucking snow</strong>",
-        "622": "tons of <strong>fucking shower snow</strong>",
-        "611": "fucking <strong>sleet</strong>",
-        "621": "nasty <strong>fucking shower sleet</strong>",
-        "701": "we have <strong>fucking mist</strong>",
-        "711": "we have <strong>fucking smoke</strong>",
-        "721": "we see <strong>fucking haze</strong>",
-        "731": "we have <strong>fucking sand/dust whirls</strong>",
-        "741": "yay, <strong>fucking fog</strong>",
-        "800": "clear <strong>fucking skies</strong>",
-        "801": "a few <strong>fucking clouds</strong>",
-        "802": "scattered <strong>fucking clouds</strong>",
-        "803": "broken <strong>fucking clouds</strong>",
-        "804": "there are <strong>fucking overcast clouds</strong>",
-        "900": "a <strong>fucking tornado</strong> is raging",
-        "901": "a <strong>fucking tropical storm</strong> is raging",
-        "902": "a <strong>fucking hurricane</strong> is raging",
-        "903": "extreme <strong>fucking cold</strong>",
-        "904": "extreme <strong>fucking heat</strong>",
-        "905": "it's <strong>windy as fuck</strong>",
-        "906": "it's <strong>fucking hailing</strong> right now"
-    }
-
-    var temperatures = [];
-    temperatures[0] = "Hell is <strong>freezing</strong> over.";
-    temperatures[1] = "It's <strong>cold as fuck</strong>.";
-    temperatures[2] = "It's <strong>fucking chilly</strong>.";
-    temperatures[3] = "It's sort of ok.";
-    temperatures[4] = "It feels pretty <strong>fucking nice</strong>.";
-    temperatures[5] = "It's pretty <strong>fucking hot</strong>.";
-    temperatures[6] = "It's <strong>hot as fuck</strong>.";
 
     function appWorld() {
 
@@ -145,7 +91,7 @@
 
     function getWeather() {
 
-        $('#weather').html('<div id="loader"><p id="fetching">Fetching info you already have. Just fucking wait and be patient, it may take a while.</p></div>');
+        $('#weather').html('<div id="loader"><p id="fetching">' + phrases.fetching + '</p></div>');
 
         var loc = navigator.geolocation.getCurrentPosition(showWeather);
 
@@ -177,14 +123,15 @@
                     seconds = '0' + seconds;
                 }
 
-                var bbmmessage = 'My weather: ';
+                var bbmmessage = phrases.myweather + ': ';
                 if (data.list[0].weather) {
                     for (var i = 0; i < data.list[0].weather.length; i++) {
                         if (i == data.list[0].weather.length - 1) {
                             dot = '.';
                         }
                         if (weatheritems > 0) {
-                            weather += '<div class="weatherdescription"> and ' + weathercodes[data.list[0].weather[i].id].replace(/fucking/, 'bloody') + dot + '</div>';
+                            // right now this only works on English. On other languages nothing will happen
+                            weather += '<div class="weatherdescription"> ' + phrases.and + ' ' + weathercodes[data.list[0].weather[i].id].replace(/fucking/, 'bloody') + dot + '</div>';
                             bbmmessage = bbmmessage + ' and ' + weathercodes[data.list[0].weather[i].id].replace(/fucking/, 'bloody') + dot;
                         } else {
                             weatheritems++;
@@ -222,7 +169,7 @@
                         wrap: true
                     });
                     blackberry.ui.cover.labels.push({
-                        label: bbmmessage.replace("My weather: ", ""),
+                        label: bbmmessage.replace(phrases.myweather + ": ", ""),
                         size: 10,
                         wrap: true
                     });
@@ -273,16 +220,16 @@
                 bbmmessage = bbmmessage + ' ' + '(' + Math.round((avg_temp * 1.8) + 32) + 'F / ' + Math.round(avg_temp) + 'C)';
                 out = '<div class="weathericons">' + weathericonstrip + '</div>';
                 out = out + '<div id="weatherpanel">';
-                out = out + '<p id="loc">You\'re near fucking ' + data.list[0].name + '.</p>';
-                out = out + '<p id="myweather">The fucking weather right now (' + hours + ':' + minutes + ') :</p>';
+                out = out + '<p id="loc">' + phrases.near + ' ' + data.list[0].name + '.</p>';
+                out = out + '<p id="myweather">' + phrases.rightnow + ' (' + hours + ':' + minutes + ') :</p>';
                 out = out + '<div class="weathertext">' + weather + '</div>';
                 out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + '<br /><span class="temperature">(' + Math.round((avg_temp * 1.8) + 32) + '&deg;F / ' + Math.round(avg_temp) + '&deg;C)</span></div></div>';
                 if (night) {
-                    out = out + '<div class="footnote">I could look outside for more information but it\'s <strong>fucking dark</strong> right now...</div>';
+                    out = out + '<div class="footnote">' + phrases.outsidenight + '</div>';
                 } else {
-                    out = out + '<div class="footnote">I could look outside for more information...</div>';
+                    out = out + '<div class="footnote">' + phrases.outside + '</div>';
                 }
-                out = out + '<div class="poweredby">The Last Weather App. By Marco van Hylckama Vlieg.<br/>Only on BlackBerry&reg; 10</div>';
+                out = out + '<div class="poweredby">' + phrases.attribution + '<br/>' + phrases.onlyon + ' BlackBerry&reg; 10</div>';
                 out = out + '</div>';
                 out = out + '<div id="menu"><div id="bbm"></div><div id="share"></div><div id="refresh"></div><div id="info"></div></div>';
                 if (night) {
@@ -303,16 +250,16 @@
                         // second, save the canvas as an image
                         saveCanvas(canvas);
                         if (night) {
-                            $('.footnote').html('You could look outside for more information but it\'s <strong>fucking dark</strong>.');
+                            $('.footnote').html(phrases.yououtsidenight);
                         } else {
-                            $('.footnote').html('You can look outside for more information.');
+                            $('.footnote').html(phrases.yououtside);
                         }
                         $('#loc, #bbm, #info, #share, #refresh').show();
                         $('.poweredby, #myweather').remove();
                     }
                 });
 
-                $('#weather').after('<div id="infoscreen"><h1>The <strong>Last</strong> Weather App</h1><p>By Marco van Hylckama Vlieg</p><p>Copyright &copy; 2013</p><p>Based on an idea by Tobias van Schneider</p><p>Powered by <strong>openweathermap.org</strong></p><div id="applink">Love this? Try Screamager! <img src="img/scrmicon.png"></div><div id="returnbtn">&raquo; Return</div></div><div id="bbmscreen"><h2>BBM</h2><ul><li id="bbmupdate">&raquo; Set Personal Weather Message</li><li id="bbmdownload">&raquo; Invite to Download</li><li id="return">&raquo; Return</li></ul></div>');
+                $('#weather').after('<div id="infoscreen"><h1>' + phrases.appname + '</h1><p>' + phrases.bymarco + '</p><p>' + phrases.copyright + '</p><p>' + phrases.idea + '</p><p>' + phrases.poweredby + ' <strong>openweathermap.org</strong></p><div id="applink">' + phrases.screamager + ' <img src="img/scrmicon.png"></div><div id="returnbtn">&raquo; ' + phrases.return + '</div></div><div id="bbmscreen"><h2>BBM</h2><ul><li id="bbmupdate">&raquo; ' + phrases.setpersonal + '</li><li id="bbmdownload">&raquo; ' + phrases.invite + '</li><li id="return">&raquo; ' + phrases.return + '</li></ul></div>');
 
                 $('#infoscreen, #bbmscreen').hide();
 
@@ -372,7 +319,7 @@
                                 uri: 'file://' + blackberry.io.sharedFolder + '/documents/tlwa.png',
                                 target_type: ["CARD"]
                             };
-                            blackberry.invoke.card.invokeTargetPicker(request, 'Share your misery',
+                            blackberry.invoke.card.invokeTargetPicker(request, phrases.sharemisery,
                             // success
                             function () {},
 
@@ -410,7 +357,7 @@
                     }
                 });
             }).error(function () {
-                out = '<div class="weathertext">Error fetching the weather.</div><div class="footnote">Looks like you\'re gonna have to look outside after all.</div>';
+                out = '<div class="weathertext">' + phrases.errorfetching + '</div><div class="footnote">' + phrases.lookoutsideafterall + '</div>';
                 $('#weather').html(out);
             });
         }
