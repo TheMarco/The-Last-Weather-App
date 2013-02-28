@@ -15,6 +15,7 @@ This app contains many BlackBerry&reg; specific features. Study the code and lea
 * On-the-fly image generation
 * Filesystem operations
 * Active Covers (view when app is minimized)
+* l10n / multi-language
 
 ## License
 

@@ -1080,9 +1080,7 @@ function isNight(lat, lon) {
     var sr = Date.parse('01/01/2013 ' + getSunrise(lat, lon).split('.')[0]);
     var date = new Date();
     var current = Date.parse('01/01/2013 ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());   
-    console.log(ss);
-    console.log(sr);
-    console.log(current); 
+ 
     if (current < sr || current > ss) {
         return true;
     }
