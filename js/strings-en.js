@@ -1,8 +1,8 @@
 weathercodes = {
     "200": "some <strong>fucking thunderstorms</strong> with a bit of rain",
-    "201": "some <strong>fucking thunderstorms</strong> and it's pissing down",
+    "201": "some <strong>fucking thunderstorms</strong> and it's pissing it down",
     "202": "some <strong>fucking thunderstorms</strong> with apocalyptic rain",
-    "210": "lame <strong>thunderstorms</strong>",
+    "210": "it's a poor man's <strong>hurricane</strong>",
     "211": "a <strong>fucking thunderstorm</strong>",
     "212": "a big <strong>fucking thunderstorm</strong>",
     "221": "a <strong>fucking ragged thunderstorm</strong>",
@@ -12,15 +12,15 @@ weathercodes = {
     "300": "light <strong>fucking drizzle</strong>",
     "301": "a <strong>fucking drizzle</strong>",
     "302": "heavy <strong>fucking drizzle</strong>",
-    "310": "it's <strong>pissing down</strong> lightly",
-    "311": "it's <strong>pissing down</strong>",
-    "312": "it's <strong>pissing down</strong> heavily",
-    "321": "<strong>Pissing showers</strong>",
-    "500": "it's <strong>pissing down</strong> lightly",
-    "501": "it's <strong>pissing down</strong> moderately",
+    "310": "it's <strong>pissing it down</strong> lightly",
+    "311": "it's <strong>pissing it down</strong>",
+    "312": "it's <strong>pissing it down</strong> like a motherfucker",
+    "321": "<strong>April Fucking Showers</strong>",
+    "500": "it's <strong>pissing it down</strong> a little",
+    "501": "it's <strong>pissing it down</strong> a fair bit",
     "502": "it's <strong>fucking raining</strong> right now",
     "503": "it's <strong>fucking raining</strong>, monsoon style",
-    "504": "an <strong>apocalyptic downpour</strong>. Prepare fucking boats",
+    "504": "a <strong>torrential fucking downpour</strong>. Stay the fuck in",
     "511": "there's freezing <strong>fucking rain</strong>",
     "520": "there are light <strong>fucking showers</strong>",
     "521": "there are <strong>fucking showers</strong>",
@@ -35,34 +35,34 @@ weathercodes = {
     "711": "we have <strong>fucking smoke</strong>",
     "721": "we see <strong>fucking haze</strong>",
     "731": "we have <strong>fucking sand/dust whirls</strong>",
-    "741": "yay, <strong>fucking fog</strong>",
+    "741": "great, <strong>motherfucking fog</strong>",
     "800": "clear <strong>fucking skies</strong>",
-    "801": "a few <strong>fucking clouds</strong>",
+    "801": "all <strong>cloudy and shit</strong>",
     "802": "scattered <strong>fucking clouds</strong>",
     "803": "broken <strong>fucking clouds</strong>",
-    "804": "there are <strong>fucking overcast clouds</strong>",
+    "804": "there are <strong>those big grey bastard clouds</strong>",
     "900": "a <strong>fucking tornado</strong> is raging",
     "901": "a <strong>fucking tropical storm</strong> is raging",
     "902": "a <strong>fucking hurricane</strong> is raging",
-    "903": "extreme <strong>fucking cold</strong>",
-    "904": "extreme <strong>fucking heat</strong>",
-    "905": "it's <strong>windy as fuck</strong>",
+    "903": "absolutely <strong>fucking baltic</strong>",
+    "904": "crazy <strong>fucking hot</strong>",
+    "905": "it's <strong>a windy bastard</strong>",
     "906": "it's <strong>fucking hailing</strong> right now"
 }
 
 temperatures = [];
 temperatures[0] = "Hell is <strong>freezing</strong> over.";
 temperatures[1] = "It's <strong>cold as fuck</strong>.";
-temperatures[2] = "It's <strong>fucking chilly</strong>.";
-temperatures[3] = "It's sort of ok.";
+temperatures[2] = "It's <strong>fucking baltic</strong>.";
+temperatures[3] = "It's nothing to write home about.";
 temperatures[4] = "It feels pretty <strong>fucking nice</strong>.";
 temperatures[5] = "It's pretty <strong>fucking hot</strong>.";
-temperatures[6] = "It's <strong>hot as fuck</strong>.";
+temperatures[6] = "It's <strong>hot as shit</strong>.";
 
 phrases = {
-    'fetching' : 'Fetching info you already have. Just fucking wait and be patient, it may take a while.',
+    'fetching' : 'Fetching info you already have. Calm the fuck down and be patient, it may take a while.',
     'myweather' : 'My weather',
-    'near' : 'You\'re near fucking',
+    'near' : 'You\'re fucking near',
     'rightnow' : 'The fucking weather right now',
     'outsidenight' : 'I could look outside for more information but it\'s <strong>fucking dark</strong> right now...',
     'outside' : 'I could look outside for more information...',
