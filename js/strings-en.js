@@ -1,4 +1,4 @@
-var weathercodes = {
+weathercodes = {
     "200": "some <strong>fucking thunderstorms</strong> with a bit of rain",
     "201": "some <strong>fucking thunderstorms</strong> and it's pissing down",
     "202": "some <strong>fucking thunderstorms</strong> with apocalyptic rain",
@@ -50,7 +50,7 @@ var weathercodes = {
     "906": "it's <strong>fucking hailing</strong> right now"
 }
 
-var temperatures = [];
+temperatures = [];
 temperatures[0] = "Hell is <strong>freezing</strong> over.";
 temperatures[1] = "It's <strong>cold as fuck</strong>.";
 temperatures[2] = "It's <strong>fucking chilly</strong>.";
@@ -59,7 +59,7 @@ temperatures[4] = "It feels pretty <strong>fucking nice</strong>.";
 temperatures[5] = "It's pretty <strong>fucking hot</strong>.";
 temperatures[6] = "It's <strong>hot as fuck</strong>.";
 
-var phrases = {
+phrases = {
     'fetching' : 'Fetching info you already have. Just fucking wait and be patient, it may take a while.',
     'myweather' : 'My weather',
     'near' : 'You\'re near fucking',

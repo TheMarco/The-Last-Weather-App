@@ -180,12 +180,18 @@ body.night #menu.on div#share {
 	text-align: left;
 	border-bottom: 1px #ccc solid;
 	}
-#returnbtn, #applink {
+#returnbtn, #applink, #lang {
 	padding: 30px 0 30px 30px;
 	display: block;
 	border-bottom: 1px #ccc solid;	
 	border-top: 1px #ccc solid;	
 }
+#lang select {
+    width: 100%;
+    height: 100px;
+    font-size: 40px;
+}
+
 #applink {
 	padding-left: 60px;
 	text-decoration: none;

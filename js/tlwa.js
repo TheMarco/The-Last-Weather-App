@@ -18,9 +18,15 @@
      
     // change to another language if you have strings-xx.js where xx is the language
     // currently en and nl are included 
-    var lang = 'en'; 
     
-    var s = $('<script type="text/javascript" src="js/strings-' + lang + '.js"></script>');
+    var lang = localStorage.getItem('language');
+    
+    if(!lang) {
+        lang = 'en'
+        localStorage.setItem('language', 'en');
+        };
+    
+    var s = $('<script id="l" type="text/javascript" src="js/strings-' + lang + '.js"></script>');
     $('head').prepend(s);
      
     var night;
@@ -262,7 +268,7 @@
                     }
                 });
 
-                $('#weather').after('<div id="infoscreen"><h1>' + phrases.appname + '</h1><p>' + phrases.bymarco + '</p><p>' + phrases.copyright + '</p><p>' + phrases.idea + '</p><p>' + phrases.poweredby + ' <strong>openweathermap.org</strong></p><div id="applink">' + phrases.screamager + ' <img src="img/scrmicon.png"></div><div id="returnbtn">&raquo; ' + phrases.return + '</div></div><div id="bbmscreen"><h2>BBM</h2><ul><li id="bbmupdate">&raquo; ' + phrases.setpersonal + '</li><li id="bbmdownload">&raquo; ' + phrases.invite + '</li><li id="return">&raquo; ' + phrases.return + '</li></ul></div>');
+                $('#weather').after('<div id="infoscreen"><h1>' + phrases.appname + '</h1><p>' + phrases.bymarco + '</p><p>' + phrases.copyright + '</p><p>' + phrases.idea + '</p><p>' + phrases.poweredby + ' <strong>openweathermap.org</strong></p><div id="lang"><select id="language"><option value="en">English</option><option value="nl">Nederlands</option></select></div><div id="applink">' + phrases.screamager + ' <img src="img/scrmicon.png"></div><div id="returnbtn">&raquo; ' + phrases.return + '</div></div><div id="bbmscreen"><h2>BBM</h2><ul><li id="bbmupdate">&raquo; ' + phrases.setpersonal + '</li><li id="bbmdownload">&raquo; ' + phrases.invite + '</li><li id="return">&raquo; ' + phrases.return + '</li></ul></div>');
 
                 $('#infoscreen, #bbmscreen').hide();
 
@@ -272,6 +278,31 @@
                 })
                     .bind('touchend', function (e) {
                     e.target.style.background = 'transparent';
+                });
+
+                $("#language option").each(function(i){
+                        if(lang == $(this).val()) {
+                            $(this).prop('selected', 'true');
+                        }
+                    });
+                $('#language').bind('change', function(){
+                   phrases = null;    
+                   localStorage.setItem('language', $('#language').val());
+                   lang = $('#language').val();
+                   $(document).unbind();
+                   blackberry.ui.cover.resetCover();
+                   $.ajax({
+                     url: "js/strings-" + lang + ".js",
+                     context: document.body,
+                   }).done(function(data) {
+                     eval(data);
+                     $('body').removeClass('night');
+                     $('body').html('<div id="weather"></div>');
+                            getWeather();
+                   });
+                   
+                   
+                   
                 });
 
                 $(document)
@@ -302,6 +333,7 @@
 
                         case 'refresh':
                             $(document).unbind();
+                            $('body').removeClass('night');
                             blackberry.ui.cover.resetCover();
                             $('body').html('<div id="weather"></div>');
                             getWeather();

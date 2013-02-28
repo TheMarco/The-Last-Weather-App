@@ -1,4 +1,4 @@
-var weathercodes = {
+weathercodes = {
     "200": "beetje <strong>tyfus onweer</strong> met zeikregen",
     "201": "<strong>tering onweer</strong> en het zeikt",
     "202": "<strong>onweer</strong> en extreme kutregen",
@@ -50,7 +50,7 @@ var weathercodes = {
     "906": "we hebben <strong>tering hagel</strong>"
 }
 
-var temperatures = [];
+temperatures = [];
 temperatures[0] = "Extreme <strong>teringkou</strong>.";
 temperatures[1] = "<strong>pleuriskou</strong>.";
 temperatures[2] = "Het is <strong>frisjes</strong>.";
@@ -59,7 +59,7 @@ temperatures[4] = "Behoorlijk <strong>lekker</strong>.";
 temperatures[5] = "Het is <strong>pleuris warm</strong>.";
 temperatures[6] = "Gigantische <strong>tyfushitte</strong>.";
 
-var phrases = {
+phrases = {
     'fetching' : 'Even opvragen wat je al lang weet. Wacht effe, stuk ongeduld, het kan even duren.',
     'myweather' : 'Het weer hier',
     'near' : 'Je bent in de buurt van',
