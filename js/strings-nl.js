@@ -1,0 +1,86 @@
+var weathercodes = {
+    "200": "beetje <strong>tyfus onweer</strong> met zeikregen",
+    "201": "<strong>tering onweer</strong> en het zeikt",
+    "202": "<strong>onweer</strong> en extreme kutregen",
+    "210": "beetje <strong>kut onweer</strong>",
+    "211": "een beetje <strong>kut onweer</strong>",
+    "212": "een enorm <strong>tyfus onweer</strong>",
+    "221": "een partij<strong>tering onweer</strong>",
+    "230": "<strong>onweer</strong> met pisregen",
+    "231": "<strong>onweer</strong> met zeikregen",
+    "232": "<strong>kut onweer</strong> met teringregen",
+    "300": "lichte <strong>pisregen</strong>",
+    "301": "flinke <strong>pisregen</strong>",
+    "302": "zware <strong>pisregen</strong>",
+    "310": "het <strong>zeikt</strong> lichtjes",
+    "311": "het <strong>zeikt</strong>",
+    "312": "het is gigantisch aan het <strong>zeiken</strong>",
+    "321": "<strong>tyfusregen</strong>",
+    "500": "het <strong>zeikt</strong> een beetje",
+    "501": "het is aardig aan het <strong>zeiken</strong>",
+    "502": "flinke <strong>teringregen</strong>",
+    "503": "gigantische <strong>pleurisregen</strong>",
+    "504": "krankzinnige <strong>teringregen</strong>.",
+    "511": "we hebben <strong>tyfus ijzel</strong>",
+    "520": "er zijn <strong>pisbuien</strong>",
+    "521": "er zijn <strong>zeikbuien</strong>",
+    "522": "er zijn gigantische <strong>pleurisbuien</strong>",
+    "600": "we hebben <strong>lichte kutsneeuw</strong>",
+    "601": "kut, <strong>het sneeuwt</strong> momenteel",
+    "602": "een heleboel <strong>teringsneeuw</strong>",
+    "622": "een pleurisvracht <strong>teringsneeuw</strong>",
+    "611": "tering <strong>natte sneeuw</strong>",
+    "621": "pleuris <strong>natte sneeuw</strong>",
+    "701": "we hebben <strong>pleuris mist</strong>",
+    "711": "we hebben <strong>pleuris rook</strong>",
+    "721": "het is <strong>fucking heiig</strong>",
+    "731": "we hebben <strong>pleuris zandstormen</strong>",
+    "741": "jippie, <strong>teringmist</strong>",
+    "800": "wat de neuk?! <strong>totaal helder</strong>!",
+    "801": "een paar <strong>kutwolkjes</strong>",
+    "802": "half blauw, half <strong>kutwolken</strong>",
+    "803": "verspreide <strong>tyfuswolken</strong>",
+    "804": "het is <strong>tering zwaarbewolkt</strong>",
+    "900": "een <strong>tering tornado</strong> raast",
+    "901": "een <strong>tering tropische storm</strong> raast",
+    "902": "een <strong>pleuris orkaan</strong> raast",
+    "903": "extreme <strong>tyfushitte</strong>",
+    "904": "extreme <strong>tyfushitte</strong>",
+    "905": "er staat een partij <strong>pleuris wind</strong>",
+    "906": "we hebben <strong>tering hagel</strong>"
+}
+
+var temperatures = [];
+temperatures[0] = "Extreme <strong>teringkou</strong>.";
+temperatures[1] = "<strong>pleuriskou</strong>.";
+temperatures[2] = "Het is <strong>frisjes</strong>.";
+temperatures[3] = "Het gaat wel.";
+temperatures[4] = "Behoorlijk <strong>lekker</strong>.";
+temperatures[5] = "Het is <strong>pleuris warm</strong>.";
+temperatures[6] = "Gigantische <strong>tyfushitte</strong>.";
+
+var phrases = {
+    'fetching' : 'Even opvragen wat je al lang weet. Wacht effe, stuk ongeduld, het kan even duren.',
+    'myweather' : 'Het weer hier',
+    'near' : 'Je bent in de buurt van',
+    'rightnow' : 'Het fucking weer momenteel',
+    'outsidenight' : 'Ik zou even buiten kunnen kijken maar het is <strong>donker</strong>.',
+    'outside' : 'Ik zou uit het raam kunnen kijken voor meer info.',
+    'attribution' : 'The Last Weather App. Door Marco van Hylckama Vlieg.',
+    'onlyon' : 'Alleen voor',
+    'yououtsidenight' : 'Je zou even uit het raam kunnen kijken maar het is <strong>donker</strong>.',
+    'yououtside' : 'Je kan uit het raam kijken voor meer info.',
+    'appname' : 'The <strong>Last</strong> Weather App',
+    'bymarco' : 'Door Marco van Hylckama Vlieg',
+    'copyright' : 'Copyright &copy; 2013',
+    'idea' : 'Gebaseerd op een idee van Tobias van Schneider',
+    'poweredby' : 'Aangedreven door',
+    'screamager' : 'Vind je dit wat? Probeer Screamager!',
+    'return' : 'Terug',
+    'setpersonal' : 'Stel je persoonlijke weerboodschap in',
+    'invite' : 'Nodig uit te downloaden',
+    'sharemisery' : 'Deel je ellende',
+    'errorfetching' : 'Fout bij het ophalen van het weer.',
+    'lookoutsideafterall' : 'Helaas, je zal toch gewoon uit het raam moeten kijken.',
+    'and' : 'en', // to link two weather descriptions, e.g. it's fucking raining and there's mist 
+}

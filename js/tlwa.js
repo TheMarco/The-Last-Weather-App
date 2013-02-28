@@ -15,6 +15,9 @@
  * limitations under the License.
  */ (function () {
      
+     
+    // change to another language if you have strings-xx.js where xx is the language
+    // currently en and nl are included 
     var lang = 'en'; 
     
     var s = $('<script type="text/javascript" src="js/strings-' + lang + '.js"></script>');
