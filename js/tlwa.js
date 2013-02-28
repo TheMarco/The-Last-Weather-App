@@ -232,7 +232,7 @@
                     out = out + '<p id="loc">' + phrases.near + ' ' + data.list[0].name + '.</p>';
                     out = out + '<p id="myweather">' + phrases.rightnow + ' (' + hours + ':' + minutes + ') :</p>';
                     out = out + '<div class="weathertext">' + weather + '</div>';
-                    out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + '<br /><span class="temperature">(' + Math.round((avg_temp * 1.8) + 32) + '&deg;F / ' + Math.round(avg_temp) + '&deg;C)</span></div></div>';
+                    out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + ' <span class="temperature">(' + Math.round((avg_temp * 1.8) + 32) + '&deg;F / ' + Math.round(avg_temp) + '&deg;C)</span></div></div>';
                     if (night) {
                         out = out + '<div class="footnote">' + phrases.outsidenight + '</div>';
                     } else {
@@ -268,7 +268,7 @@
                         }
                     });
 
-                    $('#weather').after('<div id="infoscreen"><h1>' + phrases.appname + '</h1><p>' + phrases.bymarco + '</p><p>' + phrases.copyright + '</p><p>' + phrases.idea + '</p><p>' + phrases.poweredby + ' <strong>openweathermap.org</strong></p><div id="lang"><select id="language"><option value="en">English</option><option value="it">Italiano</option><option value="nl">Nederlands</option></select></div><div id="applink">' + phrases.screamager + ' <img src="img/scrmicon.png"></div><div id="returnbtn">&raquo; ' + phrases.return + '</div></div><div id="bbmscreen"><h2>BBM</h2><ul><li id="bbmupdate">&raquo; ' + phrases.setpersonal + '</li><li id="bbmdownload">&raquo; ' + phrases.invite + '</li><li id="return">&raquo; ' + phrases.return + '</li></ul></div>');
+                    $('#weather').after('<div id="infoscreen"><h1>' + phrases.appname + '</h1><p>' + phrases.bymarco + '</p><p>' + phrases.copyright + '</p><p>' + phrases.idea + '</p><p>' + phrases.poweredby + ' <strong>openweathermap.org</strong></p><div id="lang"><select id="language"><option value="en">English</option><option value="gb">British English</option><option value="it">Italiano</option><option value="nl">Nederlands</option></select></div><div id="applink">' + phrases.screamager + ' <img src="img/scrmicon.png"></div><div id="returnbtn">&raquo; ' + phrases.return + '</div></div><div id="bbmscreen"><h2>BBM</h2><ul><li id="bbmupdate">&raquo; ' + phrases.setpersonal + '</li><li id="bbmdownload">&raquo; ' + phrases.invite + '</li><li id="return">&raquo; ' + phrases.return + '</li></ul></div>');
 
                     $('#infoscreen, #bbmscreen').hide();
 

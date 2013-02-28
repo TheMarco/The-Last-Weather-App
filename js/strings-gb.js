@@ -1,0 +1,86 @@
+weathercodes = {
+    "200": "a <strong>fucking thunderstorm</strong> and some bloody rain",
+    "201": "a <strong>fucking thunderstorm</strong> and it's pissing it down",
+    "202": "a <strong>fucking thunderstorm</strong> and a fuckton of rain",
+    "210": "it's a poor man's <strong>hurricane</strong>",
+    "211": "a <strong>shitting thunderstorm</strong>",
+    "212": "a huge <strong>bastard of a storm</strong>",
+    "221": "a <strong>right shitter of a thunderstorm</strong>",
+    "230": "a <strong>big stormy fucker</strong> and light bloody drizzle",
+    "231": "a <strong>right fucker of a storm</strong> and drizzle",
+    "232": "a <strong>crazy fucking storm</strong> and heavy drizzle",
+    "300": "light <strong>bloody drizzle</strong>",
+    "301": "a <strong>fucking annoying drizzle</strong>",
+    "302": "bucketloads of <strong>fucking drizzle</strong>",
+    "310": "it's <strong>barely pissing it down</strong>",
+    "311": "it's <strong>pissing it down</strong>",
+    "312": "it's <strong>pissing it down</strong> like a motherfucker",
+    "321": "<strong>April Fucking Showers</strong>",
+    "500": "it's barely <strong>pissing it down</strong>, get out the door",
+    "501": "it's <strong>pissing it down</strong> a fair bit",
+    "502": "it's <strong>raining fucking cats and dogs</strong> right now",
+    "503": "it's <strong>raining like there's no tomorrow</strong>, water-fucking-fall",
+    "504": "a <strong>torrential fucking downpour</strong>. Stay the fuck in",
+    "511": "there's <strong>rain that'll ice your tits off</strong>",
+    "520": "there's barely <strong>a shower</strong>",
+    "521": "there's a <strong>fucking shower on</strong>",
+    "522": "there's a <strong>shower</strong> and you'll be <strong>fucking drenched</strong>",
+    "600": "there's <strong>light snow</strong>, the fucking country'll shut down",
+    "601": "it's <strong>a fucking snow storm</strong> out there",
+    "602": "get your fucking sledge, <strong>fuckton of snow</strong>",
+    "622": "Polar fucking bear - <strong>shit ton of shower snow</strong>",
+    "611": "there's that shitting <strong>sleet</strong> outside",
+    "621": "cunt of a <strong>shower sleet</strong>",
+    "701": "what do I see? Shit all - there's <strong>fucking mist</strong>",
+    "711": "bunch of <strong>fucking smoke</strong>",
+    "721": "we're seeing a <strong>bloody haze</strong>",
+    "731": "we have <strong>whirling fucking sand and shit</strong>",
+    "741": "great, <strong>motherfucking fog</strong>",
+    "800": "it's a <strong>fucking nice day</strong>",
+    "801": "all <strong>cloudy and shit</strong>",
+    "802": "scattered <strong>bloody clouds</strong>",
+    "803": "broken <strong>cunting clouds</strong>",
+    "804": "there are <strong>those big grey bastard clouds</strong>",
+    "900": "a <strong>shitting tornado</strong> is fucking shit up",
+    "901": "a <strong>fucking tropical storm</strong> is doing a number on us",
+    "902": "a <strong>fucking hurricane</strong> is blowing shit away",
+    "903": "absolutely <strong>fucking baltic</strong>",
+    "904": "crazy <strong>fucking hot</strong>",
+    "905": "it's <strong>a windy bastard</strong>",
+    "906": "it's <strong>fucking hailing</strong> like a bastard out there"
+}
+
+temperatures = [];
+temperatures[0] = "I'm <strong>freezing</strong> my nads off.";
+temperatures[1] = "It's <strong>cold as fuck</strong>.";
+temperatures[2] = "It's <strong>fucking baltic</strong>.";
+temperatures[3] = "It's nothing to write home about.";
+temperatures[4] = "It feels pretty <strong>fucking nice</strong>.";
+temperatures[5] = "It's pretty <strong>fucking hot</strong>.";
+temperatures[6] = "It's <strong>hot as shit</strong>.";
+
+phrases = {
+    'fetching' : 'Fetching info you already have. Calm the fuck down and be patient, it may take a while.',
+    'myweather' : 'My weather',
+    'near' : 'You\'re fucking near',
+    'rightnow' : 'The motherfucking weather right now',
+    'outsidenight' : 'I could look outside for more information but it\'s <strong>fucking dark</strong> right now...',
+    'outside' : 'I could look outside for more information...',
+    'attribution' : 'The Last Weather App. By Marco van Hylckama Vlieg.',
+    'onlyon' : 'Only on',
+    'yououtsidenight' : 'You could use your fucking window but it\'s <strong>bloody dark</strong>.',
+    'yououtside' : 'More information? Use a fucking window, genius',
+    'appname' : 'The <strong>Last</strong> Weather App',
+    'bymarco' : 'By Marco van Hylckama Vlieg',
+    'copyright' : 'Copyright &copy; 2013',
+    'idea' : 'Based on an idea by Tobias van Schneider',
+    'poweredby' : 'Powered by',
+    'screamager' : 'Love this? Try Screamager!',
+    'return' : 'Return',
+    'setpersonal' : 'Set Personal Weather Message',
+    'invite' : 'Invite to Download',
+    'sharemisery' : 'Share your misery',
+    'errorfetching' : 'Error fetching the weather.',
+    'lookoutsideafterall' : 'Looks like you\'re gonna have to look out the fucking window after all.',
+    'and' : 'and', // to link two weather descriptions, e.g. it's fucking raining and there's mist 
+}
