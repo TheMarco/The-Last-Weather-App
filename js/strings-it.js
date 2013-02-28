@@ -1,0 +1,86 @@
+weathercodes = {
+    "200": "alcuni <strong>fottuti temporali</strong> con un p&ograve; di pioggia",
+    "201": "alcuni <strong>fottuti temporali</strong> con pisciarola",	
+    "202": "alcuni <strong>fottuti temporali</strong> con pioggia apocalittica",
+    "210": "possibili <strong>temporali</strong>",	
+    "211": "un <strong>fottuto temporale</strong>",
+    "212": "un grande <strong>fottuto temporale</strong>",
+    "221": "un <strong>fottuto temporale</strong> irregolare",
+    "230": "un <strong>fottuto temporale</strong> con pioggerellina",
+    "231": "un <strong>fottuto temporale</strong> con pioggia",
+    "232": "un <strong>fottuto temporale</strong> con pioggia intensa",
+    "300": "una <strong>fottuta pioggerellina</strong>",
+    "301": "una <strong>fottuta pioggia</strong>",
+    "302": "una <strong>fottuta pioggia</strong> intensa",
+    "310": "&egrave; una <strong>pisciarola</strong> leggera",
+    "311": "&egrave; una <strong>pisciarola</strong>",
+    "312": "&egrave; una <strong>pisciarola</strong> pesante",
+    "321": "<strong>pisciata di doccia</strong>",
+    "500": "&egrave; una <strong>pisciata</strong> leggera",
+    "501": "&egrave; una <strong>pisciata</strong> moderata",
+    "502": "&egrave; una <strong>fottuta pioggia</strong>",
+    "503": "&egrave; una <strong>fottuta pioggia</strong>, in stile monsone",
+    "504": "un <strong>acquazzone apocalittico</strong>. Preparate le barche",
+    "511": "c'&egrave; una <strong>fottuta pioggia</strong> gelata",	
+    "520": "ci sono <strong>fottute doccie</strong> leggere",
+    "521": "ci sono <strong>fottute doccie</strong>",
+    "522": "ci sono <strong>fottute doccie</strong> intense",
+    "600": "c'&egrave; una <strong>fottuta nevicata</strong> leggera",
+    "601": "c'&egrave; una <strong>fottuta nevicata</strong>",
+    "602": "tonnellate di <strong>fottuta neve</strong>",
+    "622": "tonnellate di <strong>fottuta neve</strong> a pioggia",
+    "611": "fottuto <strong>nevischio</strong>",
+    "621": "brutto <strong>fottuto nevischio</strong> a pioggia",
+    "701": "c'&egrave; una  <strong>fottuta nebbia</strong>",
+    "711": "c'&egrave; un <strong>fottuto fumo</strong>",
+    "721": "si vede una <strong>fottuta foschia</strong>",
+    "731": "ci sono <strong>fottute sabbie/polveri sospese</strong>", 
+    "741": "azz, <strong>fottuta nebbia</strong>",   
+    "800": "<strong>fottuto cielo</strong> sereno",
+    "801": "qualche <strong>fottuta nuvola</strong>",
+    "802": "<strong>fottute nuvole</strong> sparse",
+    "803": "<strong>fottute nuvole</strong> a pecorelle",
+    "804": "c'&egrave; un <strong>fottuto cielo nuvoloso</strong>",
+    "900": "si sta scatenando un <strong>fottuto tornado</strong> ",
+    "901": "si sta scatenando una <strong>fottuta tempesta tropicale</strong>",
+    "902": "si sta scatenando un <strong>fottuto uragano</strong>",
+    "903": "<strong>fottuto freddo</strong> estremo",
+    "904": "<strong>fottuto caldo</strong> estremo",
+    "905": "c'&egrave; un <strong>fottuto vento</strong>",
+    "906": "c'&egrave; una <strong>fottuta grandinata</strong>"
+}
+
+temperatures = [];
+temperatures[0] = "L'inferno si &egrave; <strong>congelato</strong>.";
+temperatures[1] = "C'&egrave; un gran <strong>fottuto freddo</strong>.";
+temperatures[2] = "C'&egrave; un <strong>fottuto freddo</strong>.";
+temperatures[3] = "Pu&ograve; andare.";
+temperatures[4] = "Si sta <strong>fottutamente bene</strong>.";
+temperatures[5] = "C'&egrave; un <strong>fottuto caldo</strong>.";
+temperatures[6] = "C'&egrave; un gran <strong>fottuto caldo</strong>.";
+
+phrases = {
+    'fetching' : 'Recupero le informazioni che gi&agrave; avete. Basta avere una fottuta pazienza e aspettare, potrebbe volerci un p&ograve;',
+    'myweather' : 'Il mio tempo',
+    'near' : 'Sei/Siete fottutamente vicino',
+    'rightnow' : 'Il fottuto tempo in questo momento &egrave;',
+    'outsidenight' : 'Ho guardato fuori per maggiori informazioni, ma &egrave; <strong>fottutamente buio</strong> adesso...',
+    'outside' : 'Ho guardato fuori per maggiori informazioni...',
+    'attribution' : 'The Last Weather App. By Marco van Hylckama Vlieg.',
+    'onlyon' : 'Solo su',
+    'yououtsidenight' : 'Sipotrebbe guardare fuori per maggiori informazioni ma &egrave; <strong>fottutamente buio</strong>.',
+    'yououtside' : '&egrave; possibile guardare fuori per ulteriori informazioni.',
+    'appname' : 'The <strong>Last</strong> Weather App',
+    'bymarco' : 'By Marco van Hylckama Vlieg',
+    'copyright' : 'Copyright &copy; 2013',
+    'idea' : 'Basato su un"idea di Tobias van Schneider',
+    'poweredby' : 'Powered by',
+    'screamager' : 'Lo adori? Prova Screamager!',
+    'return' : 'Invio',
+    'setpersonal' : 'Impostare Messaggio Meteo Personale',
+    'invite' : 'Invita al Download',
+    'sharemisery' : 'Condividi la tua miseria',
+    'errorfetching' : 'Errore durante il recupero del meteo.',
+    'lookoutsideafterall' : 'Dopo tutto sembra che tu/voi dovrai/ete guardare fuori.',
+    'and' : 'e', // to link two weather descriptions, e.g. it's fucking raining and there's mist 
+}
