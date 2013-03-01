@@ -83,4 +83,4 @@ var phrases = {
     'errorfetching' : 'Error a obtener el clima',
     'lookoutsideafterall' : 'Parece que vas a tener que buscar fuera, despu&eacute;s de todo.',
     'and' : 'y' // to link two weather descriptions, e.g. it's fucking raining and there's mist 
-};
+}

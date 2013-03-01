@@ -49,6 +49,7 @@
         "312": ["rain_heavy.png"],
         "321": ["showers.png"],
         "500": ["rain_medium.png"],
+        "501": ["rain_heavy.png"],
         "502": ["rain_heavy.png"],
         "503": ["rain_heavy.png"],
         "504": ["rain_heavy.png"],
@@ -232,7 +233,7 @@
                     out = out + '<p id="loc">' + phrases.near + ' ' + data.list[0].name + '.</p>';
                     out = out + '<p id="myweather">' + phrases.rightnow + ' (' + hours + ':' + minutes + ') :</p>';
                     out = out + '<div class="weathertext">' + weather + '</div>';
-                    out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + ' <span class="temperature">(' + Math.round((avg_temp * 1.8) + 32) + '&deg;F / ' + Math.round(avg_temp) + '&deg;C)</span></div></div>';
+                    out = out + '<div class="temp">' + tempicon + '<div class="temptext">' + tempnote + ' <span class="temperature"> (' + Math.round((avg_temp * 1.8) + 32) + '&deg;F / ' + Math.round(avg_temp) + '&deg;C)</span></div></div>';
                     if (night) {
                         out = out + '<div class="footnote">' + phrases.outsidenight + '</div>';
                     } else {
