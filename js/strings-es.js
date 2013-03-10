@@ -1,7 +1,7 @@
 var weathercodes = {
 		"200" : "puta madre <strong>tormentas</strong> con un poco de lluvia",
-		"201" : "puta <strong>tormentas</strong> y est&aacute; meando duro",
-		"202" : "puta <strong>tormentas</strong> con lluvia apocal&iacute;ptica",
+		"201" : "puta <strong>tormentas</strong> y est&aacute; meando fuerte",
+		"202" : "puta <strong>tormentas</strong> con lluvia apocal&iacute;ptica. Limpio de pecados?",
 		"210" : "quiere ser una <strong>tormenta</strong>",
 		"211" : "es una puta <strong>tormenta</strong>",
 		"212" : "mierda esta pesada esta <strong>tormenta</strong>",
@@ -12,17 +12,17 @@ var weathercodes = {
 		"300" : "maldita <strong>llovizna</strong> ligera",
 		"301" : "maldita <strong>llovizna</strong>",
 		"302" : "maldita <strong>llovizna</strong> pesada",
-		"310" : "esta <strong>meando</strong> ligero",
+		"310" : "esta <strong>meando</strong> suave",
 		"311" : "esta <strong>meando</strong>",
-		"312" : "esta <strong>meando</strong> pesado",
+		"312" : "esta <strong>meando</strong> con fuerza",
 		"321" : "<strong>Meando lluvia</strong>",
 		"500" : "esta <strong>meando</strong> ligerito",
-		"501" : "esta <strong>meando</strong> moderadamente",
-		"502" : "esta <strong>jodidamente lloviendo</strong> aurita",
+		"501" : "esta <strong>meando</strong> tranquilo",
+		"502" : "esta <strong>jodidamente lloviendo</strong> ahora",
 		"503" : "esta <strong>jodidamente lloviendo</strong>, estilo monz&oacute;n",
 		"504" : "hay un <strong>aguacero apocal&iacute;ptico</strong>. Preparen sus malditos barcos",
 		"511" : "puta madre hay congelaci&oacute;n en la <strong>lluvia</strong>",
-		"520" : "hay malditas <strong>lluvias</strong> ligeras",
+		"520" : "hay malditas <strong>lluvias</strong> suaves y molestas",
 		"521" : "hay malditas <strong>lluvias</strong>",
 		"522" : "puta madre hay <strong>lluvias</strong> pesadas",
 		"600" : "hay puta <strong>nieve ligera</strong>",
@@ -52,7 +52,7 @@ var weathercodes = {
 
 	var temperatures = [];
 	temperatures[0] = "El infierno esta <strong>congelandose</strong>.";
-	temperatures[1] = "<strong>Frio</strong> como mierda.";
+	temperatures[1] = "<strong>Frio</strong> como igl&uacute; con ventanas abiertas.";
 	temperatures[2] = "Maldito <strong>frio</strong>.";
 	temperatures[3] = "Mas o menos.";
 	temperatures[4] = "Mierda que <strong>bonito</strong>.";
@@ -62,13 +62,13 @@ var weathercodes = {
 var phrases = {
     'fetching' : 'Obteniedo la informaci&oacute;n que ya tenemos. Pero carajo espera y se paciente, puede tomar un tiempo.',
     'myweather' : 'Mi clima',
-    'near' : 'Estas serca de mierda',
-    'rightnow' : 'El puto clima aurita',
-    'outsidenight' : 'Yo pudriera mirar afuera pero <strong>mierda que oscuro</strong> que esta...',
-    'outside' : 'Pudriera mirar afuera para mas informacion...',
+    'near' : 'Estas cerca de la mierda de',
+    'rightnow' : 'El puto clima ahora',
+    'outsidenight' : 'Yo podria mirar afuera pero <strong>mierda que oscuro</strong> que esta...',
+    'outside' : 'Puede mirar afuera para mas informaci&oacute;n...',
     'attribution' : 'La Ultima App del Clima. By Marco van Hylckama Vlieg.',
     'onlyon' : 'Solo en',
-    'yououtsidenight' : 'Pudrieras mirar afuera para mas informacion pero <strong>puta madre esta oscuro</strong>.',
+    'yououtsidenight' : 'Pudrieras mirar afuera para mas informacion pero <strong>puta madre esta oscuro</strong>. Cuidado',
     'yououtside' : 'Puedes mirar afuera para mas informacion.',
     'appname' : 'La <strong>Ultima</strong> App Del Clima',
     'bymarco' : 'Por Marco van Hylckama Vlieg',
@@ -78,7 +78,7 @@ var phrases = {
     'screamager' : 'Te gusto? Intenta Screamager!',
     'return' : 'Volver',
     'setpersonal' : 'Establecer Mensaje del Clima Personal',
-    'invite' : 'Invita a bajar',
+    'invite' : 'Invita a descargar',
     'sharemisery' : 'Comparte tu miseria',
     'errorfetching' : 'Error a obtener el clima',
     'lookoutsideafterall' : 'Parece que vas a tener que buscar fuera, despu&eacute;s de todo.',
