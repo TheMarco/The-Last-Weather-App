@@ -110,7 +110,7 @@
                 var lon = Math.round(position.coords.longitude * 10000) / 10000;
                 night = isNight(lat, lon);
 
-                $.getJSON('http://api.openweathermap.org/data/2.1/find/city?lat=' + lat + '&lon=' + lon + '&cnt=1', function (data) {
+                $.getJSON('http://api.openweathermap.org/data/2.1/find/city?lat=' + lat + '&lon=' + lon + '&cnt=1&APPID=02ba45d924a74a0b3c381dcfd7d57061', function (data) {
                     var tempnode;
                     var tempicon;
                     var weather = '';
